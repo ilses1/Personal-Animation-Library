@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="mickey">
+          <div class="head">
+            <div class="face">
+              <div class="round01"></div>
+              <div class="round02"></div>
+              <div class="round03"></div>
+            </div>
+            <div class="ear ear-left"></div>
+            <div class="ear ear-right"></div>
+            <div class="eye eye-left"></div>
+            <div class="eye eye-right"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+            <div class="shy"></div>
+            <div class="shy shy-right"></div>
+          </div>
+          <div class="hand hand-left"></div>
+          <div class="hand hand-right"></div>
+      
+        </div>
+      </div>
+</body>
+<style>
+    *{
+  margin: 0;
+  padding: 0;
+}
+body{
+  color: #333;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mickey{
+  position: relative;
+}
+.head{
+  width: 140px;
+  height: 136px;
+  border-radius: 48%;
+  background: #1D1518;
+}
+.face .round01{
+  width: 124px;
+  height: 70px;
+  background: #FFEEE2;
+  border-radius: 70%;
+  position: absolute;
+  bottom: -1px;
+  left: 10px;
+}
+.face .round02{
+  width: 54px;
+  height: 60px;
+  background: #FFEEE2;
+  border-radius: 70%;
+  position: absolute;
+  top: 26px;
+  left: 23px;
+}
+.face .round03{
+  width: 54px;
+  height: 60px;
+  background: #FFEEE2;
+  border-radius: 70%;
+  position: absolute;
+  top: 26px;
+  right: 23px;
+}
+.eye{
+  width: 20px;
+  height: 24px;
+  border-radius: 50%;
+  background: #1D1518;
+  position: absolute;
+  top: 63px;
+  left: 39px;
+  overflow: hidden;
+}
+.eye::after{
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  background: #fff;
+  width: 4px;
+  height: 5px;
+  border-radius: 50%;
+}
+.eye-right{
+  left: 82px;
+}
+.nose{
+  width: 14px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1D1518;
+  position: absolute;
+  left: 64px;
+  top: 90px;
+}
+.mouth{
+  width: 26px;
+  height: 6px;
+  border: 3px solid #1D1518;
+  border-radius: 0 0 50% 50%/0 0 100% 100%;
+  border-top: none;
+  margin: 0 auto;
+  position: absolute;
+  top: 112px;
+  left: 55px;
+}
+
+/* 腮红 */
+.shy{
+  width: 26px;
+  height: 26px;
+  background: #F58D8B;
+  border-radius: 60%;
+  position: absolute;
+  top: 86px;
+  left: 22px;
+}
+.shy-right{
+  left: 96px;
+}
+
+
+/* 手 */
+.hand{
+  width: 27px;
+  height: 50px;
+  background: #000;
+  border-radius: 60%;
+  position: absolute;
+  left: 35px;
+  bottom: -19px;
+  transform: rotate(27deg);
+  z-index: -1;
+}
+.hand-right{
+  left: 70px;
+  bottom: -3px;
+  transform: rotate(-39deg);
+}
+
+/* 耳朵 */
+.ear{
+  width: 78px;
+  height: 78px;
+  border-radius: 77% 68%;
+  background: #1D1518;
+  position: absolute;
+  left: -21px;
+  top: -31px;
+  z-index: -1;
+}
+.ear-right{
+  left: 92px;
+}
+
+/* 眼睛动画 */
+.eye{
+  animation: wink 0.4s linear infinite alternate;
+}
+@keyframes wink{
+  0%{
+    height: 2px;
+    top: 74px;
+  }
+  100%{
+    height: 24px;
+    top: 63px;
+  }
+}
+
+/* 手动画 */
+.hand-left{
+  transform-origin: 35px -19px;
+  animation: reach 0.4s ease infinite alternate;
+}
+@keyframes reach{
+  0%{
+    transform: rotate(48deg);
+  }
+  100%{
+    left: 35px;
+    bottom: -19px;
+    transform: rotate(27deg);
+  }
+}
+.hand-right{
+  transform-origin: 35px -5px;
+  animation: reach2 0.4s ease infinite alternate;
+}
+@keyframes reach2{
+  0%{
+    left: 62px;
+    transform: rotate(-70deg);
+  }
+  100%{
+    left: 70px;
+    bottom: -3px;
+    transform: rotate(-39deg);
+  }
+}
+
+/* 腮红动画 */
+.shy{
+  animation: enlarge 0.5s linear infinite alternate;
+}
+@keyframes enlarge{
+  0%{
+    transform: scale(0.6);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+</style>
+</html>
