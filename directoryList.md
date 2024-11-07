@@ -1,0 +1,13 @@
+|-- undefined
+    |-- anime1.html
+    |-- anime2.html
+    |-- anime3.html
+    |-- anime4.html
+    |-- anime5.html
+    |-- anime6.html
+    |-- anime7.html
+    |-- directoryList.md
+    |-- index.html
+    |-- README.md
+    |-- icon
+        |-- test.jpg
